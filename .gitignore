@@ -6,3 +6,7 @@
 !assets/
 !assets/**
 .DS_Store
+!favicon.ico
+!robots.txt
+!sitemap.xml
+!site.webmanifest
