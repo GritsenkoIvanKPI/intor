@@ -1,0 +1,8 @@
+# Keep only the website in the repo
+*
+!.gitignore
+!index.html
+!serve.mjs
+!assets/
+!assets/**
+.DS_Store
