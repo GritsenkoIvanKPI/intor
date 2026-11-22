@@ -252,6 +252,46 @@
   .link-arrow:hover .arr, .link-arrow:focus-visible .arr { transform: translateX(6px); }
   .link-arrow:active { opacity: .6; }
 
+
+  /* Services */
+  .svc { display: grid; gap: 20px; padding: 32px 0 36px; border-top: 1px solid var(--line); }
+  .svc:last-child { border-bottom: 1px solid var(--line); }
+  .svc-head { display: flex; align-items: baseline; gap: 16px; }
+  .svc-num { font-family: 'Newsreader', serif; font-style: italic; font-weight: 300; font-size: 22px; color: var(--steel); font-variant-numeric: tabular-nums; }
+  .svc-title { font-size: 28px; line-height: 1.15; }
+  .svc-lead { font-size: 18px; line-height: 1.7; color: #333; }
+  .svc-split { display: grid; gap: 20px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); }
+  .svc-sub { font-family: 'Newsreader', serif; font-size: 19px; color: var(--ink); }
+  .svc-sub-t { font-size: 15px; line-height: 1.7; color: #444; margin-top: 6px; }
+  .svc-cta { margin-top: 24px; min-height: 44px; }
+  .svc-list { background: var(--paper); padding: 24px; }
+  .svc-list-t { font-size: 10px; color: var(--steel); }
+  .svc-list ul { margin-top: 14px; }
+  .svc-list li { position: relative; padding: 10px 0 10px 22px; font-size: 15px; line-height: 1.5; color: #333; border-top: 1px solid var(--line); }
+  .svc-list li:first-child { border-top: 0; padding-top: 0; }
+  .svc-list li::before { content: ''; position: absolute; left: 0; top: 17px; width: 7px; height: 7px; border: 1px solid var(--navy); }
+  .svc-list li:first-child::before { top: 7px; }
+  .svc .svc-title { transition: transform .6s var(--ease-spring); }
+  .svc:hover .svc-title { transform: translateX(4px); }
+  @media (min-width: 768px) { .svc-split { grid-template-columns: 1fr 1fr; gap: 32px; } .svc-title { font-size: 32px; } }
+  @media (min-width: 1024px) {
+    .svc { grid-template-columns: minmax(0, 4fr) minmax(0, 5fr) minmax(0, 3fr); gap: 48px; padding: 44px 0 48px; }
+    .svc-head { flex-direction: column; gap: 10px; }
+    .svc-list { padding: 28px; }
+  }
+
+  .platforms { padding: 32px 24px; box-shadow: var(--shadow-floating); }
+  .plat-grid { display: grid; grid-template-columns: 1fr; gap: 28px; margin-top: 32px; padding-top: 28px; border-top: 1px solid rgba(255, 255, 255, .14); }
+  .plat-cat { font-size: 10px; color: rgba(255, 255, 255, .55); }
+  .plat-col ul { margin-top: 10px; }
+  .plat-col li { font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.3; color: #fff; padding: 9px 0; border-bottom: 1px solid rgba(255, 255, 255, .1); transition: transform .5s var(--ease-spring), opacity .3s; }
+  .plat-col li:hover { transform: translateX(4px); }
+  .plat-note { margin-top: 28px; font-size: 12px; line-height: 1.6; color: rgba(255, 255, 255, .45); }
+  @media (min-width: 360px) and (max-width: 767px) { .plat-grid { grid-template-columns: 1fr 1fr; gap: 28px 20px; } .plat-col li { font-size: 17px; } }
+  @media (min-width: 768px) { .plat-grid { grid-template-columns: 1fr 1fr; gap: 32px 40px; } }
+  @media (min-width: 768px) { .platforms { padding: 48px; } }
+  @media (min-width: 1024px) { .plat-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } .platforms { padding: 56px; } }
+
   /* Surfaces */
   .surface-elevated { background: #fff; box-shadow: var(--shadow-elevated); }
   .surface-floating { background: #fff; box-shadow: var(--shadow-floating); }
@@ -433,13 +473,14 @@
       <span class="logo-word">Intor</span>
     </a>
     <nav class="hidden lg:block" aria-label="Primary">
-      <ul class="flex items-center gap-7 xl:gap-9">
+      <ul class="flex items-center gap-5 xl:gap-9">
         <li><a href="#about" class="hnav-link" data-nav="about">About</a></li>
         <li><a href="#what-we-do" class="hnav-link" data-nav="what-we-do">What We Do</a></li>
         <li><a href="#focus" class="hnav-link" data-nav="focus">Focus</a></li>
         <li><a href="#standards" class="hnav-link" data-nav="standards">Standards</a></li>
         <li><a href="#approach" class="hnav-link" data-nav="approach">Approach</a></li>
         <li><a href="#projects" class="hnav-link" data-nav="projects">Projects</a></li>
+        <li><a href="#services" class="hnav-link" data-nav="services">Services</a></li>
         <li><a href="#founder" class="hnav-link" data-nav="founder">Founder</a></li>
       </ul>
     </nav>
@@ -458,7 +499,8 @@
       <a href="#standards" class="mnav-link"><span class="mnav-num">04</span>World Standards</a>
       <a href="#approach" class="mnav-link"><span class="mnav-num">05</span>Our Approach</a>
       <a href="#projects" class="mnav-link"><span class="mnav-num">06</span>Projects</a>
-      <a href="#founder" class="mnav-link"><span class="mnav-num">07</span>Founder</a>
+      <a href="#services" class="mnav-link"><span class="mnav-num">07</span>Services</a>
+      <a href="#founder" class="mnav-link"><span class="mnav-num">08</span>Founder</a>
       <a href="#contact" class="btn btn-accent mt-8 sm:hidden">Contact</a>
     </nav>
   </div>
@@ -778,7 +820,141 @@
   </div>
 </section>
 
-<!-- ================= 8. FOUNDER ================= -->
+<!-- ================= 8. SERVICES ================= -->
+<section id="services" class="module bg-white" aria-labelledby="services-title">
+  <div class="max-w-site mx-auto">
+    <div class="grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-6 lg:gap-20 items-end">
+      <h2 id="services-title" class="t-title h-section reveal d1">What we do for others.</h2>
+      <p class="t-serif text-[18px] leading-[1.7] text-[#333] reveal d2">The work behind our own projects is also available on its own. Developers, investors and operators bring us in for a single stage or for the whole path, in the United States, Canada and the European Union.</p>
+    </div>
+
+    <div class="mt-12 md:mt-16">
+      <!-- 01 -->
+      <article class="svc reveal">
+        <div class="svc-head">
+          <span class="svc-num">01</span>
+          <h3 class="t-title svc-title">Sites with confirmed power</h3>
+        </div>
+        <div class="svc-body">
+          <p class="t-serif svc-lead">Power is the scarcest input in this industry, and most sites that promise it cannot deliver. We bring you land where the electricity is already confirmed in writing, from 10&nbsp;MW upward.</p>
+          <a href="#contact" class="link-arrow t-label svc-cta" data-service="Sites with confirmed power">Discuss a site <span class="arr" aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="svc-list">
+          <p class="t-label svc-list-t">You receive</p>
+          <ul>
+              <li>Utility letter or contract confirming capacity</li>
+              <li>Title, zoning and industrial land-use check</li>
+              <li>Fibre routes and connection costs</li>
+              <li>Legal opinion on building and operating a data center</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 02 -->
+      <article class="svc reveal">
+        <div class="svc-head">
+          <span class="svc-num">02</span>
+          <h3 class="t-title svc-title">Documentation and cost control</h3>
+        </div>
+        <div class="svc-body">
+          <p class="t-serif svc-lead">We prepare the full package needed to build a turnkey data center, then go through the contractor&rsquo;s estimate line by line. Each item is checked against market prices and the design it is meant to serve.</p>
+          <div class="svc-split">
+            <div>
+              <p class="svc-sub">Turnkey documentation</p>
+              <p class="svc-sub-t">Design, engineering and permit drawings, prepared to local codes in the US (IBC, NFPA), Canada (NBC) and the EU (EN&nbsp;50600, Eurocodes).</p>
+            </div>
+            <div>
+              <p class="svc-sub">Cost estimate review</p>
+              <p class="svc-sub-t">Independent audit of the budget, value engineering and supplier benchmarking, before the contract is signed.</p>
+            </div>
+          </div>
+          <a href="#contact" class="link-arrow t-label svc-cta" data-service="Documentation and cost control">Discuss a project <span class="arr" aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="svc-list">
+          <p class="t-label svc-list-t">You receive</p>
+          <ul>
+              <li>Concept and detailed design, MEP included</li>
+              <li>Permit set for the local authority</li>
+              <li>Bill of quantities and tender documents</li>
+              <li>Cost review report with savings identified</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 03 -->
+      <article class="svc reveal">
+        <div class="svc-head">
+          <span class="svc-num">03</span>
+          <h3 class="t-title svc-title">Software, cloud and security</h3>
+        </div>
+        <div class="svc-body">
+          <p class="t-serif svc-lead">A data center is only as dependable as the systems that watch over it. We plan, deploy and connect the software layer: facility monitoring, hybrid cloud, virtualisation and cybersecurity, on the platforms tenants already trust.</p>
+          <a href="#contact" class="link-arrow t-label svc-cta" data-service="Software, cloud and security">Discuss your systems <span class="arr" aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="svc-list">
+          <p class="t-label svc-list-t">You receive</p>
+          <ul>
+              <li>DCIM and building management set-up</li>
+              <li>Hybrid cloud and virtualisation design</li>
+              <li>Network security and access control</li>
+              <li>24/7 monitoring and incident response</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <!-- Platforms -->
+    <div class="platforms dark-field grain mt-12 md:mt-16 reveal">
+      <div class="relative z-[1]">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <h3 class="t-title text-[28px] md:text-[34px] text-white">Platforms we work with</h3>
+          <p class="t-serif text-[16px] text-white/65 max-w-[420px]">We build on the systems your tenants and auditors already know, not on anything proprietary.</p>
+        </div>
+        <div class="plat-grid">
+          <div class="plat-col">
+            <p class="t-label plat-cat">Cloud and hybrid</p>
+            <ul>
+              <li>Microsoft Azure</li>
+              <li>Azure Local</li>
+              <li>AWS Outposts</li>
+              <li>Google Distributed Cloud</li>
+            </ul>
+          </div>
+          <div class="plat-col">
+            <p class="t-label plat-cat">Compute</p>
+            <ul>
+              <li>NVIDIA AI Enterprise</li>
+              <li>VMware by Broadcom</li>
+              <li>Nutanix</li>
+              <li>Red Hat OpenShift</li>
+            </ul>
+          </div>
+          <div class="plat-col">
+            <p class="t-label plat-cat">Facility and DCIM</p>
+            <ul>
+              <li>Schneider Electric EcoStruxure</li>
+              <li>Vertiv</li>
+              <li>Siemens</li>
+              <li>Eaton</li>
+            </ul>
+          </div>
+          <div class="plat-col">
+            <p class="t-label plat-cat">Cybersecurity</p>
+            <ul>
+              <li>Microsoft Sentinel</li>
+              <li>Palo Alto Networks</li>
+              <li>Fortinet</li>
+              <li>CrowdStrike</li>
+            </ul>
+          </div>
+        </div>
+        <p class="plat-note">Product names are trademarks of their respective owners and are listed to show compatibility, not partnership.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 9. FOUNDER ================= -->
 <section id="founder" class="module dark-field grain text-white overflow-hidden" aria-labelledby="founder-title">
   <div class="relative z-[1] max-w-site mx-auto grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-12 lg:gap-20 items-center">
     <figure class="reveal">
@@ -814,12 +990,12 @@
   </div>
 </section>
 
-<!-- ================= 9. CONTACT ================= -->
+<!-- ================= 10. CONTACT ================= -->
 <section id="contact" class="module bg-stone" aria-labelledby="contact-title">
   <div class="max-w-site mx-auto grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-12 lg:gap-20">
     <div>
       <h2 id="contact-title" class="t-title h-section reveal d1">Write to us.</h2>
-      <p class="t-serif text-[18px] leading-[1.7] text-[#333] mt-6 reveal d2">Investors, partner funds, landowners with powered sites, and operators looking for capacity. Tell us a little about your interest and we will reply personally.</p>
+      <p class="t-serif text-[18px] leading-[1.7] text-[#333] mt-6 reveal d2">Investors, partner funds, landowners with powered sites, operators looking for capacity, and clients for our services. Tell us a little about your interest and we will reply personally.</p>
       <div class="mt-10 space-y-6 reveal d3">
         <div class="border-t border-ink pt-4">
           <p class="t-label !text-[10px] text-steel">Email</p>
@@ -865,7 +1041,7 @@
 
 </main>
 
-<!-- ================= 10. FOOTER ================= -->
+<!-- ================= 11. FOOTER ================= -->
 <footer class="dark-field grain relative text-white px-5 md:px-10 pt-16 md:pt-20 pb-8 overflow-hidden">
   <div class="relative z-[1] max-w-site mx-auto">
     <a href="#top" class="logo inverse lg" aria-label="Intor — back to top">
@@ -894,6 +1070,7 @@
             <li><a href="#standards" class="nav-link !text-white t-label">World Standards</a></li>
             <li><a href="#approach" class="nav-link !text-white t-label">Our Approach</a></li>
             <li><a href="#projects" class="nav-link !text-white t-label">Projects</a></li>
+            <li><a href="#services" class="nav-link !text-white t-label">Services</a></li>
           </ul>
           <ul class="space-y-0 lg:space-y-6 sm:border-l sm:border-white/15 sm:pl-8">
             <li><a href="#founder" class="nav-link !text-white t-label">Founder</a></li>
@@ -988,6 +1165,13 @@
   }), { rootMargin: '-45% 0px -50% 0px' });
   navLinks.forEach(l => { const sec = document.getElementById(l.dataset.nav); if (sec) spy.observe(sec); });
   mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mnav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.setAttribute('aria-label', 'Open menu'); }));
+
+
+  // Services: prefill the enquiry with the chosen service
+  document.querySelectorAll('[data-service]').forEach(a => a.addEventListener('click', () => {
+    const msg = document.getElementById('f-msg');
+    if (msg && !msg.value.trim()) msg.value = 'I am interested in: ' + a.dataset.service + '.\n\n';
+  }));
 
   // Reveal
   const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
