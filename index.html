@@ -63,7 +63,7 @@
       "@id": "https://gritsenkoivankpi.github.io/intor/#founder",
       "name": "Vitalii Abrams",
       "jobTitle": "Founder",
-      "image": "https://gritsenkoivankpi.github.io/intor/assets/img/founder.jpg",
+      "image": "https://gritsenkoivankpi.github.io/intor/assets/img/founder-portrait.jpg",
       "worksFor": { "@id": "https://gritsenkoivankpi.github.io/intor/#organization" }
     },
     {
@@ -337,6 +337,7 @@
   .hs-text.is-active { opacity: 1; transform: none; visibility: visible; transition: opacity .9s var(--ease-out) .25s, transform 1.1s var(--ease-out) .25s, visibility 0s; }
   .hs-media img { position: absolute; inset: 0; opacity: 0; transform: scale(1.06); transition: opacity 1.4s var(--ease-out), transform 7s linear; }
   .hs-media img.is-active { opacity: 1; transform: scale(1); }
+  .hs-media img.hs-founder { object-position: 50% 30%; }
   .hs-pager { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; display: flex; align-items: center; gap: 20px; padding: 0 24px 10px; }
   .hs-count { font-family: 'Newsreader', Georgia, serif; font-size: 15px; color: rgba(255, 255, 255, .7); letter-spacing: .02em; min-width: 56px; font-variant-numeric: tabular-nums; }
   .hs-cur { color: #fff; }
@@ -516,19 +517,23 @@
     <div class="hero-slider surface-floating grid lg:grid-cols-[minmax(0,5fr)_minmax(0,9fr)]" id="heroSlider" aria-roledescription="carousel" aria-label="Intor at a glance">
       <div class="order-2 lg:order-1 px-6 py-10 md:px-12 md:py-14 lg:px-10 xl:px-14 flex flex-col justify-center">
         <div class="hs-texts reveal d1">
-          <div class="hs-text is-active" role="group" aria-roledescription="slide" aria-label="1 of 4">
+          <div class="hs-text is-active" role="group" aria-roledescription="slide" aria-label="1 of 5">
             <h1 id="hero-title" class="t-display h-hero text-ink">The ground beneath intelligence.</h1>
             <p class="t-serif text-[18px] leading-[1.65] text-[#333] mt-6">We find the land, secure the power, build the data center and sign the tenant. Intor carries each project from an empty field to a working AI facility, in the United States, Europe and the Middle East.</p>
           </div>
-          <div class="hs-text" role="group" aria-roledescription="slide" aria-label="2 of 4" aria-hidden="true">
+          <div class="hs-text" role="group" aria-roledescription="slide" aria-label="2 of 5" aria-hidden="true">
+            <h2 class="t-display h-hero text-ink">Fifteen years in the field.</h2>
+            <p class="t-serif text-[18px] leading-[1.65] text-[#333] mt-6">Founder Vitalii Abrams spent fifteen years installing and supplying equipment for solar plants and data centers. Intor grew out of that work and out of one conviction: AI will need foundations built to last for decades.</p>
+          </div>
+          <div class="hs-text" role="group" aria-roledescription="slide" aria-label="3 of 5" aria-hidden="true">
             <h2 class="t-display h-hero text-ink">It begins with an empty field.</h2>
             <p class="t-serif text-[18px] leading-[1.65] text-[#333] mt-6">More than 130 land sites in the United States, Hungary, Poland and Chile are under study. We check every title, zoning file and route for fibre before a single plan is drawn.</p>
           </div>
-          <div class="hs-text" role="group" aria-roledescription="slide" aria-label="3 of 4" aria-hidden="true">
+          <div class="hs-text" role="group" aria-roledescription="slide" aria-label="4 of 5" aria-hidden="true">
             <h2 class="t-display h-hero text-ink">Power comes first.</h2>
             <p class="t-serif text-[18px] leading-[1.65] text-[#333] mt-6">Each site starts with a confirmed grid connection of 10 MW or more. Without it, there is no project. With it, there is the one thing AI cannot do without.</p>
           </div>
-          <div class="hs-text" role="group" aria-roledescription="slide" aria-label="4 of 4" aria-hidden="true">
+          <div class="hs-text" role="group" aria-roledescription="slide" aria-label="5 of 5" aria-hidden="true">
             <h2 class="t-display h-hero text-ink">Built to run for decades.</h2>
             <p class="t-serif text-[18px] leading-[1.65] text-[#333] mt-6">We build turnkey, contract the full capacity to an international tenant for five to ten years, and stay on to operate, maintain and protect the site.</p>
           </div>
@@ -540,16 +545,18 @@
       </div>
       <div class="hs-media order-1 lg:order-2 media aspect-[4/3] md:aspect-[16/9] lg:aspect-auto lg:min-h-[560px]">
         <img width="1800" height="1004" class="is-active" src="assets/img/hero.jpg" alt="Modular data center campus at blue hour with an electrical substation in the background" fetchpriority="high">
+        <img width="640" height="640" class="hs-founder" src="assets/img/founder.jpg" alt="Vitalii Abrams, founder of Intor, at his desk" loading="lazy">
         <img width="1800" height="1004" src="assets/img/hero-4.jpg" alt="Gravel road across empty flat land toward transmission towers at dawn" loading="lazy">
         <img width="1800" height="1004" src="assets/img/hero-2.jpg" alt="High-voltage electrical substation with transformers at dusk" loading="lazy">
         <img width="1800" height="1004" src="assets/img/hero-3.jpg" alt="Aisle of server racks with liquid-cooling pipes inside a data center hall" loading="lazy">
         <div class="hs-pager">
-          <p class="hs-count" aria-hidden="true"><span class="hs-cur">01</span><span class="hs-sep">/</span>04</p>
+          <p class="hs-count" aria-hidden="true"><span class="hs-cur">01</span><span class="hs-sep">/</span>05</p>
           <div class="hs-dots">
             <button type="button" class="hs-dot is-active" aria-label="Show slide 1" aria-current="true"><span class="hs-fill"></span></button>
             <button type="button" class="hs-dot" aria-label="Show slide 2"><span class="hs-fill"></span></button>
             <button type="button" class="hs-dot" aria-label="Show slide 3"><span class="hs-fill"></span></button>
             <button type="button" class="hs-dot" aria-label="Show slide 4"><span class="hs-fill"></span></button>
+            <button type="button" class="hs-dot" aria-label="Show slide 5"><span class="hs-fill"></span></button>
           </div>
         </div>
       </div>
@@ -958,8 +965,8 @@
 <section id="founder" class="module dark-field grain text-white overflow-hidden" aria-labelledby="founder-title">
   <div class="relative z-[1] max-w-site mx-auto grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-12 lg:gap-20 items-center">
     <figure class="reveal">
-      <div class="media original aspect-square surface-floating">
-        <img width="640" height="640" src="assets/img/founder.jpg" alt="Portrait of Vitalii Abrams, founder of Intor" loading="lazy">
+      <div class="media original aspect-[4/5] surface-floating">
+        <img width="853" height="1280" class="object-[50%_20%]" src="assets/img/founder-portrait.jpg" alt="Portrait of Vitalii Abrams, founder of Intor" loading="lazy">
       </div>
       <figcaption class="mt-5 flex items-baseline justify-between gap-4 border-t border-white/20 pt-4">
         <span class="t-title text-[22px]">Vitalii Abrams</span>
